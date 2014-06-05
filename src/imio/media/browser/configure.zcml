@@ -6,15 +6,31 @@
 
     <!-- Publish static files -->
     <browser:resourceDirectory
-        name="imio.media"
+        name="imio.media.static"
         directory="static"
+        layer="..interfaces.IImioMediaLayer"
         />
+
+    <browser:page
+        name="medialink_oembed_view"
+        for="imio.media.interfaces.IMediaLink"
+        template="templates/medialink_oembed_view.pt"
+        class=".medialink_oembed_view.MediaLinkView"
+        permission="zope2.View"
+        />
+
 
     <browser:page
         name="collection_oembed_view"
         for="plone.app.collection.interfaces.ICollection"
         template="templates/collection_oembed_view.pt"
+        class=".collection_oembed_view.CollectionOembedView"
         permission="zope2.View"
         />
+
+    <!--utility
+        factory="collective.oembed.endpoints.Consumer"
+        name="collective.oembed.superconsumer"
+        /-->
 
 </configure>

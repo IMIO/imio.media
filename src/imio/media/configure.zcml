@@ -7,6 +7,8 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="imio.media">
 
+    <include package="collective.oembed" />
+
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
 
@@ -28,4 +30,5 @@
 
     <i18n:registerTranslations directory="locales" />
 
+    
 </configure>
