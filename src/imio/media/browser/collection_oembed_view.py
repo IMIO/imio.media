@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from Products.Five.browser import BrowserView
+from collective.oembed import consumer
 
 
 class CollectionOembedView(BrowserView):
@@ -10,12 +11,19 @@ class CollectionOembedView(BrowserView):
     """
 
     def embed(self, obj):
-        oembed = obj.restrictedTraverse('@@proxy-oembed-provider')
-        if oembed is None:
+        consumer_view = consumer.ConsumerView(obj, self.request)
+        if not consumer_view:
             return u""
-        return oembed.get_embed(obj.remoteUrl)
+        consumer_view._url = obj.remoteUrl
+
+        return consumer_view.get_embed_auto()
 
     def get_style(self, obj):
-        return "max-width: {}px;max-height: {}px".format(
-            obj.maxwidth,
-            obj.maxheight)
+        result = ''
+        if obj.maxwidth:
+            result += 'max-width: {}px;'.format(obj.maxwidth)
+
+        if obj.maxheight:
+            result += 'max-height: {}px;'.format(obj.maxheight)
+
+        return result
