@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.1.2 (unreleased)
+0.1.2 (2014-06-06)
 ------------------
 
 - Remove old files and old dependency
