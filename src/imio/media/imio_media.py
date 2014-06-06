@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-from plone.app.contenttypes.content import Link
 from zope.interface import implements
 from .interfaces import IMediaLink
 
 
-class MediaLink(Link):
+class MediaLink(object):
     """ """
     implements(IMediaLink)
 
