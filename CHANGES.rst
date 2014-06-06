@@ -4,7 +4,8 @@ Changelog
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove old files and old dependency
+  [bsuttor]
 
 
 0.1.1 (2014-06-06)
