@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from Products.Five.browser import BrowserView
-from collective.oembed import consumer
+from imio.media.browser import utils
 
 
 class MediaLinkView(BrowserView):
@@ -11,19 +11,7 @@ class MediaLinkView(BrowserView):
     """
 
     def embed(self):
-        consumer_view = consumer.ConsumerView(self.context, self.request)
-        if not consumer_view:
-            return u""
-
-        consumer_view._url = self.context.remoteUrl
-        return consumer_view.get_embed_auto()
+        return utils.embed(self.context, self.request)
 
     def get_style(self):
-        result = ''
-        if self.context.maxwidth:
-            result += 'max-width: {}px;'.format(self.context.maxwidth)
-
-        if self.context.maxheight:
-            result += 'max-height: {}px;'.format(self.context.maxheight)
-
-        return result
+        return utils.get_style(self.context)
