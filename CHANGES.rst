@@ -4,7 +4,8 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Remove unused dependecy plone.app.contenttypes.
+  [bsuttor]
 
 
 0.1 (2014-06-06)
