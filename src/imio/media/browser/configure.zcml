@@ -13,7 +13,7 @@
 
     <browser:page
         name="medialink_oembed_view"
-        for="imio.media.interfaces.IMediaLink"
+        for="imio.media.imio_media.IMediaLink"
         template="templates/medialink_oembed_view.pt"
         class=".medialink_oembed_view.MediaLinkView"
         permission="zope2.View"
