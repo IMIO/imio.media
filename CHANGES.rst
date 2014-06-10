@@ -4,7 +4,11 @@ Changelog
 0.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Heritage from dexterity item
+  [bsuttor]
+
+- Remove IVersionnable behaviors.
+  [bsuttor]
 
 
 0.1.2 (2014-06-06)
