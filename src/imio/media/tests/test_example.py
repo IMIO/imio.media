@@ -7,6 +7,7 @@ from Products.CMFCore.utils import getToolByName
 
 from imio.media.testing import IMIO_MEDIA_INTEGRATION
 
+
 class TestIntegration(unittest.TestCase):
     layer = IMIO_MEDIA_INTEGRATION
 
@@ -24,4 +25,4 @@ class TestIntegration(unittest.TestCase):
         pid = 'imio.media'
         installed = [p['id'] for p in qi_tool.listInstalledProducts()]
         self.assertTrue(pid in installed,
-                    'package appears not to have been installed')
+                        'package appears not to have been installed')

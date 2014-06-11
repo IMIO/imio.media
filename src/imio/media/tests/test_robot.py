@@ -9,12 +9,12 @@ from imio.media.testing import IMIO_MEDIA_ROBOT_TESTING
 def test_suite():
     suite = unittest.TestSuite()
     robots_file = [
-                'example.robot',
-            ]
+        'example.robot',
+    ]
 
     for robot_file in robots_file:
         rts = robotsuite.RobotTestSuite(robot_file)
         suite.addTests([
-            layered(rts,  layer=IMIO_MEDIA_ROBOT_TESTING)
+            layered(rts, layer=IMIO_MEDIA_ROBOT_TESTING)
         ])
     return suite
