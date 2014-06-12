@@ -2,14 +2,13 @@
 import unittest2 as unittest
 from zope.event import notify
 from zope.traversing.interfaces import BeforeTraverseEvent
-from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 
 from plone import api
 from imio.media.testing import IMIO_MEDIA_INTEGRATION
-from lxml import html
+
 
 class TestIntegration(unittest.TestCase):
     layer = IMIO_MEDIA_INTEGRATION
