@@ -37,6 +37,7 @@ setup(
         'setuptools',
         'collective.oembed',
         'plone.app.dexterity',
+        'plone.api',
     ],
     extras_require={
         'test': [
