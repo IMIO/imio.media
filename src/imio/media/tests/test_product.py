@@ -3,10 +3,8 @@ import unittest2 as unittest
 from zope.event import notify
 from zope.traversing.interfaces import BeforeTraverseEvent
 from Products.CMFCore.utils import getToolByName
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, \
-            setRoles, login, logout
+    setRoles, login
 
 from plone import api
 from imio.media.testing import IMIO_MEDIA_INTEGRATION
