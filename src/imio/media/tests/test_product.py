@@ -5,6 +5,8 @@ from zope.traversing.interfaces import BeforeTraverseEvent
 from Products.CMFCore.utils import getToolByName
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, \
+            setRoles, login, logout
 
 from plone import api
 from imio.media.testing import IMIO_MEDIA_INTEGRATION
@@ -19,6 +21,7 @@ class TestIntegration(unittest.TestCase):
         self.request = self.layer['request']
         self.request['ACTUAL_URL'] = self.portal.absolute_url()
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
+        login(self.portal, TEST_USER_NAME)
         notify(BeforeTraverseEvent(self.portal, self.request))
 
     def test_product_is_installed(self):
@@ -38,4 +41,6 @@ class TestIntegration(unittest.TestCase):
             type='media_link',
             title='video',
             remoteUrl='http://vimeo.com/95988841')
-        self.failUnless(multimedia.view())
+        view = multimedia.restrictedTraverse('@@medialink_oembed_view')
+        self.assertTrue(view())
+        self.assertEqual(view.request.response.status, 200)

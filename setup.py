@@ -42,6 +42,7 @@ setup(
     extras_require={
         'test': [
             'plone.app.robotframework',
+            'ipdb',
         ],
     },
     entry_points="""
