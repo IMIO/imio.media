@@ -7,6 +7,7 @@ from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, \
     setRoles, login
 
 from plone import api
+from imio.media.browser import utils
 from imio.media.testing import IMIO_MEDIA_INTEGRATION
 
 
@@ -32,13 +33,37 @@ class TestIntegration(unittest.TestCase):
         self.assertTrue(pid in installed,
                         'package appears not to have been installed')
 
+    def test_add_media_link(self):
+        multimedia = api.content.create(
+            container=self.portal,
+            type='media_link',
+            title='video',
+            remoteUrl='http://vimeo.com/95988841',
+            maxwidth=300,
+            maxheight=200
+        )
+        self.assertEqual(multimedia.maxheight, 200)
+
     def test_view(self):
         # Get the vienk_oembed_viewOw
         multimedia = api.content.create(
             container=self.portal,
             type='media_link',
             title='video',
-            remoteUrl='http://vimeo.com/95988841')
+            remoteUrl='http://vimeo.com/95988841',
+            maxheight=800)
         view = multimedia.restrictedTraverse('@@medialink_oembed_view')
         self.assertTrue(view())
         self.assertEqual(view.request.response.status, 200)
+
+    def test_utils(self):
+        notembed = utils.embed(None, None)
+        self.assertTrue(notembed == u"")
+        multimedia = api.content.create(
+            container=self.portal,
+            type='media_link',
+            title='video',
+            remoteUrl='http://vimeo.com/95988841')
+        view = multimedia.restrictedTraverse('@@medialink_oembed_view')
+        embed = utils.embed(multimedia, view.request)
+        self.assertTrue('<iframe src="//player.vimeo.com/video/95988841" width="1280" height="720"'in embed)
