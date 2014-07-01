@@ -13,7 +13,7 @@
 <div tal:define="batch python:context.results()" class="collection-oembed">
     <div class="collectionContainer" tal:repeat="item batch">
 
-    <tal:block tal:define="realobject python:item.getObject()">
+    <tal:block tal:define="realobject python:item.getObject()" tal:condition="python:item.portal_type=='media_link'">
     <div i18n:domain="plone" tal:define="url realobject/remoteUrl;"
          tal:attributes="style realobject/style_attr">
         <h3 class="medialinkTitle" tal:content="item/Title"></h3>
