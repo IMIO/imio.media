@@ -10,6 +10,9 @@ Changelog
 - Add picto media-link
   [bsuttor]
 
+- Add portlet
+  [bsuttor]
+
 
 0.1.3 (2014-06-10)
 ------------------
