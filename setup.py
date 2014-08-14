@@ -14,7 +14,7 @@ long_description = \
 
 setup(
     name='imio.media',
-    version='0.1.4.dev0',
+    version='0.2',
     description="This package is used to view video from links. You can add video or photo from a link which accept oembeded protocol. This package has as dependecy collective.oembeded.",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers

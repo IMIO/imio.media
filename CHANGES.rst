@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.1.4 (unreleased)
-------------------
+0.2 (2014-08-14)
+----------------
 
 - Fix error if collection_oembed_view is used with other type than media_link.
   [bsuttor]
