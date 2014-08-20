@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.1 (unreleased)
+0.2.1 (2014-08-20)
 ------------------
 
 - Add a title to media_link portlet
