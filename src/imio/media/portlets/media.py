@@ -44,7 +44,7 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen. Here, we use the title that the user gave.
         """
-        if getattr(self, 'header'):
+        if hasattr(self, 'header'):
             return self.header
         return _(u"Media Portlet")
 
