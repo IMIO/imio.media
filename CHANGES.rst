@@ -4,7 +4,8 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix error on manage-portlets view where a old version of portlet was use.
+  [bsuttor]
 
 
 0.2.1 (2014-08-20)
