@@ -4,9 +4,11 @@
                  plone_view context/@@plone;
                  toLocalizedTime nocall:plone_view/toLocalizedTime;">
 
-      <div class="portletItem iframe-responsive-wrapper" tal:attributes="style view/get_style">
-          <img class="iframe-ratio"  src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7"/>
-          <div tal:content="structure view/embed"></div>
-      </div>
+    <h3 tal:condition="view/get_header" tal:content="view/get_header">Title</h3>
+    <div class="portletItem iframe-responsive-wrapper" tal:attributes="style view/get_style">
+    
+        <img class="iframe-ratio"  src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAAALAAAAAAQAAkAAAIKhI+py+0Po5yUFQA7"/>
+        <div tal:content="structure view/embed"></div>
+    </div>
     
 </div>

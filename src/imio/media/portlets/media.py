@@ -16,9 +16,15 @@ from imio.media.browser import utils
 
 
 class IMediaPortlet(IPortletDataProvider):
+
+    header = schema.TextLine(
+        title=_(u"Portlet title"),
+        description=_(u"Title of the rendered portlet"),
+        required=False)
+
     target_media = schema.Choice(
         title=_(u"Target Media"),
-        description=_(u"Find the collection which provides the items to list"),
+        description=_(u"Find the Media Link which provides the items to list"),
         required=True,
         source=SearchableTextSourceBinder(
             {'portal_type': ('media_link',)},
@@ -29,8 +35,18 @@ class IMediaPortlet(IPortletDataProvider):
 class Assignment(base.Assignment):
     implements(IMediaPortlet)
 
-    def __init__(self, target_media=None):
+    def __init__(self, header=u"", target_media=None):
+        self.header = header
         self.target_media = target_media
+
+    @property
+    def title(self):
+        """This property is used to give the title of the portlet in the
+        "manage portlets" screen. Here, we use the title that the user gave.
+        """
+        if getattr(self, 'header'):
+            return self.header
+        return _(u"Media Portlet")
 
 
 class Renderer(base.Renderer):
@@ -43,6 +59,9 @@ class Renderer(base.Renderer):
     @property
     def available(self):
         return len(self.media_link())
+
+    def get_header(self):
+        return self.data.header
 
     def medialink_url(self):
         media = self.media_link()

@@ -4,7 +4,8 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a title to media_link portlet
+  [bsuttor]
 
 
 0.2 (2014-08-14)
