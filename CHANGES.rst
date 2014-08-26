@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.2 (unreleased)
+0.2.2 (2014-08-26)
 ------------------
 
 - Add batch navigation into collection view.
