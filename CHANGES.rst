@@ -4,6 +4,9 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
+- Add batch navigation into collection view.
+  [bsuttor]
+
 - Fix error on manage-portlets view where a old version of portlet was use.
   [bsuttor]
 
