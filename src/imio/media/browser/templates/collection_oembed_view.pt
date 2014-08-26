@@ -10,7 +10,7 @@
 
 <metal:content-core fill-slot="content-core">
 
-<div tal:define="batch python:context.results()" class="collection-oembed">
+<div tal:define="batch python:context.results(b_size=25)" class="collection-oembed">
     <div class="collectionContainer" tal:repeat="item batch">
 
     <tal:block tal:define="realobject python:item.getObject()" tal:condition="python:item.portal_type=='media_link'">
@@ -33,6 +33,7 @@
 
 
     </div>
+    <div metal:use-macro="context/batch_macros/macros/navigation" />
 </div>
 
 </metal:content-core>
