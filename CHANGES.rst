@@ -4,7 +4,11 @@ Changelog
 0.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixing tests because of a change from Vimeo.
+  [bsuttor]
+
+- Add IMIO Jenkins integration.
+  [bsuttor]
 
 
 0.2.2 (2014-08-26)
