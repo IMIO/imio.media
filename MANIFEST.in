@@ -1,7 +1,6 @@
 include setup.py
 include *.rst
 exclude *.cfg
-exclude .*
 exclude bootstrap.py
 exclude Makefile
 
