@@ -4,6 +4,9 @@ Changelog
 0.2.3 (unreleased)
 ------------------
 
+- Add support for dexterity collection.
+  [bsuttor]
+
 - Fixing tests because of a change from Vimeo.
   [bsuttor]
 
