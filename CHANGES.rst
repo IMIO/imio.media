@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.3 (unreleased)
+0.2.3 (2016-05-17)
 ------------------
 
 - Add support for dexterity collection.
