@@ -28,6 +28,16 @@
         permission="zope2.View"
         />
 
+
+    <browser:page
+        name="collection_oembed_view"
+        for="plone.app.contenttypes.interfaces.ICollection"
+        template="templates/collection_oembed_view.pt"
+        class=".collection_oembed_view.CollectionOembedView"
+        permission="zope2.View"
+        />
+
+
     <!--utility
         factory="collective.oembed.endpoints.Consumer"
         name="collective.oembed.superconsumer"
