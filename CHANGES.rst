@@ -4,7 +4,8 @@ Changelog
 0.2.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixing tests, add plone.app.contenttypes dependency.
+  [bsuttor]
 
 
 0.2.3 (2016-05-17)
