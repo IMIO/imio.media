@@ -7,6 +7,7 @@
 
 
   <include file="configure.zcml" />
+  <include package="plone.app.contenttypes" />
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="testing"
