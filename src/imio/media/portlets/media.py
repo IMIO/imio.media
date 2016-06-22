@@ -58,7 +58,8 @@ class Renderer(base.Renderer):
 
     @property
     def available(self):
-        return len(self.media_link())
+        link = self.media_link()
+        return link is not None and len(link)
 
     def get_header(self):
         return self.data.header
