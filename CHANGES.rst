@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.4 (unreleased)
+0.2.4 (2016-06-24)
 ------------------
 
 - Fixing tests, add plone.app.contenttypes dependency.
