@@ -41,6 +41,7 @@ setup(
     ],
     extras_require={
         'test': [
+            'unittest2',
             'plone.app.robotframework',
             'ipdb',
         ],

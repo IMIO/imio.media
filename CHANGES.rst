@@ -4,8 +4,8 @@ Changelog
 0.2.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Add missing import for tests
+  [laulaz]
 
 0.2.4 (2016-06-24)
 ------------------
