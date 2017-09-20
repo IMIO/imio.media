@@ -4,6 +4,9 @@ Changelog
 0.2.5 (unreleased)
 ------------------
 
+- Use unittest instead of unittest2.
+  [bsuttor]
+
 - Add missing import for tests
   [laulaz]
 
