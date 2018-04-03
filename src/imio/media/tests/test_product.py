@@ -66,4 +66,4 @@ class TestIntegration(unittest.TestCase):
             remoteUrl='http://vimeo.com/95988841')
         view = multimedia.restrictedTraverse('@@medialink_oembed_view')
         embed = utils.embed(multimedia, view.request)
-        self.assertTrue('<iframe src="https://player.vimeo.com/video/95988841" width="480" height="270"'in embed)
+        self.assertTrue('<iframe src="https://player.vimeo.com/video/95988841?app_id=122963" width="480" height="270"'in embed)
