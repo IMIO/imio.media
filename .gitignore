@@ -12,3 +12,4 @@ var
 *.mo
 .coverage
 htmlcov/
+pip-selfcheck.json
