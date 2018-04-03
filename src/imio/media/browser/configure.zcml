@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="imio.media">
 
@@ -19,7 +20,6 @@
         permission="zope2.View"
         />
 
-
     <browser:page
         name="collection_oembed_view"
         for="plone.app.collection.interfaces.ICollection"
@@ -27,7 +27,6 @@
         class=".collection_oembed_view.CollectionOembedView"
         permission="zope2.View"
         />
-
 
     <browser:page
         name="collection_oembed_view"
@@ -37,10 +36,26 @@
         permission="zope2.View"
         />
 
-
     <!--utility
         factory="collective.oembed.endpoints.Consumer"
         name="collective.oembed.superconsumer"
         /-->
+
+    <faceted:view
+        name="faceted-list-oembeds"
+        template="templates/list-oembeds.pt"
+        title="Faceted items OEmbeded"
+        permission="zope2.View"
+        layer="..interfaces.IImioMediaLayer"
+        />
+
+    <browser:page
+        name="faceted-list-oembed"
+        for="zope.interface.Interface"
+        template="templates/list-oembed.pt"
+        permission="zope2.View"
+        class=".faceted_oembed_view.FacetedOembedView"
+        layer="..interfaces.IImioMediaLayer"
+        />
 
 </configure>
