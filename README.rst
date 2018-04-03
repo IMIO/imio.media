@@ -4,10 +4,10 @@ imio.media
 
 This package is used to view video from links. You can add video or photo from a link which accept oembeded protocol. This package has as dependecy collective.oembeded.
 
-* `Source code @ GitHub <https://github.com/bsuttor/imio.media>`_
+* `Source code @ GitHub <https://github.com/imio/imio.media>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/imio.media>`_
 * `Documentation @ ReadTheDocs <http://imiomedia.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/bsuttor/imio.media>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/imio/imio.media>`_
 
 How it works
 ============
@@ -27,4 +27,3 @@ Configuration
 =============
 
 ...
-
