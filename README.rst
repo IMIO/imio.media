@@ -21,7 +21,7 @@ This package is tested using Travis CI. The current status is :
 How it works
 ============
 
-This package is based on collective.oembed
+This package is based on collective.oembed.
 
 
 Installation
