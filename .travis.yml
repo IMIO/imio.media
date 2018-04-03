@@ -1,11 +1,20 @@
 language: python
-python:
-  - 2.7
-
+addons:
+  firefox: "52.0.2"
+sudo: true
+cache:
+  directories:
+    - eggs
+    - downloads
+python: 2.7
 install:
-  - mkdir -p buildout-cache/{eggs,downloads}
-  - $(which echo) -e "[buildout]\nextends = buildout.d/travis.cfg" > buildout.cfg
-  - make version=$TRAVIS_PYTHON_VERSION .installed.cfg
-
+  - pip install -r requirements.txt
+  - bin/buildout -N buildout:download-cache=downloads annotate
+  - bin/buildout buildout:download-cache=downloads
 script:
-  - make tests
+  - bin/code-analysis
+  - bin/test
+after_success:
+  - bin/createcoverage
+  - pip install -q coveralls==0.5
+  - coveralls
