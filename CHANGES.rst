@@ -4,6 +4,9 @@ Changelog
 0.2.5 (unreleased)
 ------------------
 
+- Add Faceted items OEmbeded view.
+  [bsuttor]
+
 - Use unittest instead of unittest2.
   [bsuttor]
 
