@@ -38,6 +38,7 @@ setup(
         'plone.app.dexterity',
         'plone.app.contenttypes',
         'plone.api',
+        'eea.facetednavigation',
     ],
     extras_require={
         'test': [
