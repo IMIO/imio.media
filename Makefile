@@ -4,8 +4,7 @@ bin/buildout=bin/buildout -Nt 4
 bin/instance=bin/instance fg
 
 bin/pip:
-	@if test -f bin/pip; then echo "Virtualenv already created"; \
-		else virtualenv-2.7 --no-setuptools . ; fi
+	virtualenv-2.7 .
 
 bin/buildout: bin/pip
 	./bin/pip install -r requirements.txt
