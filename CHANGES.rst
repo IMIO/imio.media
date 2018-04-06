@@ -4,7 +4,8 @@ Changelog
 0.2.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add title and link to obj on faceted view.
+  [bsuttor]
 
 
 0.2.5 (2018-04-03)
