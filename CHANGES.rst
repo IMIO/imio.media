@@ -4,7 +4,10 @@ Changelog
 0.2.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add new Rich Text Description field
+- Print description and Detailed Description in Medialink page 
+- Print description below each medialink in collection view
+  [cboulanger]
 
 
 0.2.6 (2018-04-06)
