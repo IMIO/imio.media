@@ -6,4 +6,5 @@
       <div tal:content="structure python:view.embed(realobject)"></div>
   </div>
   <div class="oembed-title"><a href="" tal:attributes="href realobject/absolute_url" tal:content="realobject/title"/></div>
+  <div class="oembed-description"><span tal:content="realobject/description"/></div>
 </div>
