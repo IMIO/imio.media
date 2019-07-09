@@ -10,6 +10,12 @@ class MediaLinkView(BrowserView):
       * url2embed
     """
 
+    def description(self):
+        return self.context.description
+
+    def rich_description(self):
+        return self.context.richdescription.output
+
     def embed(self):
         return utils.embed(self.context, self.request)
 
