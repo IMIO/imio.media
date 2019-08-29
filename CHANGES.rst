@@ -4,7 +4,10 @@ Changelog
 0.2.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add new Rich Text Description field
+- Print Detailed Description and hide "classic" description in Medialink page
+- Print description below each medialink in collection view and can hide it thanks to ICpskinIndexViewSettings show_descriptions settings
+  [cboulanger]
 
 
 0.2.6 (2018-04-06)

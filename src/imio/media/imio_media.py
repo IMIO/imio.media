@@ -3,6 +3,7 @@ from zope.interface import implements
 from plone.supermodel import model
 from zope.schema import TextLine, Int
 from . import _
+from plone.app.textfield import RichText
 from plone.dexterity.content import Item
 
 
@@ -25,6 +26,11 @@ class IMediaLink(model.Schema):
         title=_(u'Max height'),
         description=_(u'Like "768", this value is in pixel'),
         required=False,
+    )
+
+    richdescription = RichText(
+        title=_(u'Detailed description'),
+        required=False
     )
 
 
