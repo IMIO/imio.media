@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.7 (unreleased)
+0.2.7 (2019-08-29)
 ------------------
 
 - Add new Rich Text Description field
