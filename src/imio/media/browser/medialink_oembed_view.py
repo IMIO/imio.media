@@ -14,7 +14,7 @@ class MediaLinkView(BrowserView):
         return self.context.description
 
     def rich_description(self):
-        return self.context.richdescription.output
+        return self.context.richdescription.output if self.context.richdescription is not None else ''
 
     def embed(self):
         return utils.embed(self.context, self.request)
