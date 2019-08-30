@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.8 (unreleased)
+0.2.8 (2019-08-30)
 ------------------
 
 - Remove useless css class and fix faceted description printing
