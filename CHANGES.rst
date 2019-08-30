@@ -4,7 +4,8 @@ Changelog
 0.2.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove useless css class and fix faceted description printing
+  [cboulanger]
 
 
 0.2.7 (2019-08-29)
