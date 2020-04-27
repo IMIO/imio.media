@@ -36,3 +36,12 @@ Configuration
 =============
 
 ...
+
+
+Translations
+=============
+
+This product has been translated into
+
+- Spanish.
+
