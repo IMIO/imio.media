@@ -1,6 +1,5 @@
+dist: bionic
 language: python
-services:
-  - xvfb
 sudo: false
 cache:
   pip: true
@@ -21,13 +20,15 @@ install:
   - bin/buildout buildout:download-cache=downloads
 before_script:
   - export DISPLAY=:99.0
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  - sleep 3
   - firefox -v
 script:
   - bin/code-analysis
-  - bin/test
+  - bin/test --all
 after_success:
   - bin/createcoverage
-  - bin/pip install coverage
+  - bin/pip install -q "coverage<5"
   - bin/python -m coverage.pickle2json
-  - pip install coveralls
-  - coveralls
+  - bin/pip install -q coveralls
+  - bin/coveralls
