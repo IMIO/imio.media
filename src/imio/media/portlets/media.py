@@ -20,15 +20,16 @@ class IMediaPortlet(IPortletDataProvider):
     header = schema.TextLine(
         title=_(u"Portlet title"),
         description=_(u"Title of the rendered portlet"),
-        required=False)
+        required=False,
+    )
 
     target_media = schema.Choice(
         title=_(u"Target Media"),
         description=_(u"Find the Media Link which provides the items to list"),
         required=True,
         source=SearchableTextSourceBinder(
-            {'portal_type': ('media_link',)},
-            default_query='path:'),
+            {"portal_type": ("media_link",)}, default_query="path:"
+        ),
     )
 
 
@@ -44,13 +45,13 @@ class Assignment(base.Assignment):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen. Here, we use the title that the user gave.
         """
-        if hasattr(self, 'header'):
+        if hasattr(self, "header"):
             return self.header
         return _(u"Media Portlet")
 
 
 class Renderer(base.Renderer):
-    _template = ViewPageTemplateFile('media.pt')
+    _template = ViewPageTemplateFile("media.pt")
     render = _template
 
     def __init__(self, *args):
@@ -82,18 +83,19 @@ class Renderer(base.Renderer):
         media_path = self.data.target_media
         if not media_path:
             return None
-        if media_path.startswith('/'):
+        if media_path.startswith("/"):
             media_path = media_path[1:]
             if not media_path:
                 return None
 
-        portal_state = getMultiAdapter((self.context, self.request),
-                                       name=u'plone_portal_state')
+        portal_state = getMultiAdapter(
+            (self.context, self.request), name=u"plone_portal_state"
+        )
         portal = portal_state.portal()
         result = portal.unrestrictedTraverse(media_path, default=None)
         if result is not None:
             sm = getSecurityManager()
-            if not sm.checkPermission('View', result):
+            if not sm.checkPermission("View", result):
                 result = None
         return result
 
@@ -103,7 +105,7 @@ class Renderer(base.Renderer):
 
 class AddForm(base.AddForm):
     form_fields = form.Fields(IMediaPortlet)
-    form_fields['target_media'].custom_widget = UberSelectionWidget
+    form_fields["target_media"].custom_widget = UberSelectionWidget
 
     label = _(u"Add media portlet")
     description = _(u"This portlet displays a media link")
@@ -115,8 +117,9 @@ class AddForm(base.AddForm):
 class EditForm(formhelper.EditForm):
     """Portlet edit form.
    """
+
     form_fields = form.Fields(IMediaPortlet)
-    form_fields['target_media'].custom_widget = UberSelectionWidget
+    form_fields["target_media"].custom_widget = UberSelectionWidget
 
     schema = IMediaPortlet
     label = _(u"Edit media portlet")
