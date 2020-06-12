@@ -1,4 +1,6 @@
 language: python
+services:
+  - xvfb
 addons:
   firefox: "52.0.2"
 sudo: false
@@ -22,7 +24,6 @@ before_script:
   - wget https://github.com/mozilla/geckodriver/releases/download/v0.16.0/geckodriver-v0.16.0-linux64.tar.gz
   - mkdir geckodriver && tar zxvf geckodriver-v0.16.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
-  - sh -e /etc/init.d/xvfb start
   - firefox -v
 script:
   - bin/code-analysis
