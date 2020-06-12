@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from collective.oembed import consumer
+from imio.media.browser.consumer import MedialinkConsumerView
 
 
 def embed(media, request):
-    consumer_view = consumer.ConsumerView(media, request)
+    consumer_view = MedialinkConsumerView(media, request)
     if not consumer_view or not getattr(media, 'remoteUrl', False):
         return u""
     consumer_view._url = media.remoteUrl
