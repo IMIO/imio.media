@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.9 (unreleased)
+0.2.9 (2020-06-12)
 ------------------
 
 - override consumer get_embed (endpoints.py), to patch youtube and vimeo provider with their good cookieless url
