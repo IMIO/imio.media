@@ -36,6 +36,14 @@
         permission="zope2.View"
         />
 
+    <browser:page
+        name="proxy-oembed-provider"
+        for="imio.media.imio_media.IMediaLink"
+        class="imio.media.browser.provider.MedialinkProxyOembedProvider"
+        permission="zope2.View"
+        layer="..interfaces.IImioMediaLayer"
+        />
+
     <!--utility
         factory="collective.oembed.endpoints.Consumer"
         name="collective.oembed.superconsumer"
