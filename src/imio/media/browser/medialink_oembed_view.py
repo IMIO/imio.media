@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from Products.Five.browser import BrowserView
 from imio.media.browser import utils
+from Products.Five.browser import BrowserView
 
 
 class MediaLinkView(BrowserView):
