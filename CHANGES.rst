@@ -4,8 +4,10 @@ Changelog
 0.2.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- override consumer get_embed (endpoints.py), to patch youtube and vimeo provider with their good cookieless url
+[boulch]
+- Create our (cookieless) consumer, override oembed provider to use our consumer.
+[boulch]
 
 0.2.8 (2019-08-30)
 ------------------
