@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.10 (unreleased)
+0.2.10 (2020-06-15)
 -------------------
 
 - Fix UnicodeEncodeError in video title.
