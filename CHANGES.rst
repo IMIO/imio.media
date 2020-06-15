@@ -4,16 +4,17 @@ Changelog
 0.2.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix UnicodeEncodeError in video title.
+  [boulch]
 
 
 0.2.9 (2020-06-12)
 ------------------
 
 - override consumer get_embed (endpoints.py), to patch youtube and vimeo provider with their good cookieless url
-[boulch]
+  [boulch]
 - Create our (cookieless) consumer, override oembed provider to use our consumer.
-[boulch]
+  [boulch]
 
 0.2.8 (2019-08-30)
 ------------------
