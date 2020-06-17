@@ -4,7 +4,7 @@ bin/buildout=bin/buildout -Nt 4
 bin/instance=bin/instance fg
 
 bin/pip:
-	virtualenv-2.7 .
+	if [ -f /usr/bin/virtualenv-2.7 ] ; then virtualenv-2.7 .;else virtualenv -p python2.7 .;fi
 
 bin/buildout: bin/pip
 	./bin/pip install -r requirements.txt
