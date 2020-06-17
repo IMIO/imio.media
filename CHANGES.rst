@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.11 (unreleased)
+0.2.11 (2020-06-17)
 -------------------
 
 - Really unshort url #SUP-13464.
