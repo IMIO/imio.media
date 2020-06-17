@@ -25,7 +25,7 @@ before_script:
   - firefox -v
 script:
   - bin/code-analysis
-  - bin/test --all
+  - bin/test -t '!robot'
 after_success:
   - bin/createcoverage
   - bin/pip install -q "coverage<5"
