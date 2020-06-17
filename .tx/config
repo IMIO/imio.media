@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+
+[plonegov-imio.imio-media-pot]
+file_filter = src/imio/media/locales/<lang>/LC_MESSAGES/imio.media.po
+minimum_perc = 0
+source_file = src/imio/media/locales/imio.media.pot
+source_lang = en
+type = PO
+
