@@ -4,7 +4,8 @@ Changelog
 0.2.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Really unshort url #SUP-13464.
+  [bsuttor]
 
 
 0.2.10 (2020-06-15)
