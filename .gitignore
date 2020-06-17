@@ -13,3 +13,4 @@ var
 .coverage
 htmlcov/
 pip-selfcheck.json
+local/
