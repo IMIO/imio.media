@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.12 (unreleased)
+0.2.12 (2020-12-04)
 -------------------
 
 - Return empty string if no data from provider.
