@@ -15,6 +15,8 @@ class CookieLessConsumer(Consumer):
 
     def get_embed(self, url, maxwidth=None, maxheight=None, format="json"):
         data = self.get_data(url, maxwidth=maxwidth, maxheight=maxheight, format=format)
+        if not data:
+            return u""
         data = self.get_no_cookie_url(data)
         if data is None or u"type" not in data:
             return u""

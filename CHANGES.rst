@@ -4,7 +4,8 @@ Changelog
 0.2.12 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Return empty string if no data from provider.
+  [bsuttor]
 
 
 0.2.11 (2020-06-17)
