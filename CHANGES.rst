@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.13 (unreleased)
+0.2.13 (2020-12-15)
 -------------------
 
 - Use https to call oembed on youtube.
