@@ -7,6 +7,7 @@ import logging
 import oembed
 import re
 import urlparse
+
 logger = logging.getLogger("collective.oembed")
 
 
@@ -32,7 +33,7 @@ class CookieLessConsumer(Consumer):
             if "youtube" in parsed.hostname.lower():
                 youtube_title = data.get("title")
                 iframe_html = iframe_html.replace(
-                    u"<iframe", u"{} title=\"{}\"".format(u"<iframe", youtube_title)
+                    u"<iframe", u'{} title="{}"'.format(u"<iframe", youtube_title)
                 )
                 new_url = u"{}://{}{}".format(
                     parsed.scheme, "www.youtube-nocookie.com", parsed.path
@@ -50,7 +51,7 @@ REGEX_PROVIDERS = [
     {
         u"hostname": ("www.youtube.com",),
         u"regex": ["regex:.*youtube\.com/watch.*", "regex:.*youtube\.com/playlist.*"],
-        u"endpoint": "http://www.youtube.com/oembed",
+        u"endpoint": "https://www.youtube.com/oembed",
         u"timeout": 2,
     },
     {

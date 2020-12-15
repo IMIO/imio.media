@@ -4,7 +4,8 @@ Changelog
 0.2.13 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Use https to call oembed on youtube.
+  [bsuttor]
 
 
 0.2.12 (2020-12-04)
